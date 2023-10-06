@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: #0c1117;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .title {
+    @apply text-white text-4xl font-medium text-center;
+  }
+  .btn {
+    @apply bg-blue shadow-main_shadow rounded-[30px] py-2 px-6 text-white font-normal text-lg text-center hover:bg-sky-600 transition-all duration-300;
+  }
+}
+
+.active {
+  color: #dd0f0f;
+}
+
+/* Стилі для контейнера пагінації */
+.swiper-pagination {
+  margin-top: 60px;
+  height: 300px;
+  width: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+
+/* Стилі для неактивних полосок */
+.swiper-pagination-bullet {
+  width: 83px;
+  height: 2px;
+  background: #fff; /* Відступ між полосками */
+  rotate: 90deg;
+}
+
+/* Стилі для активної полоски */
+.swiper-pagination-bullet-active {
+  background: #003adb;
+}

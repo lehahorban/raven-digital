@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "name": "John Doe",
+      "company": "Company 1 / CEO",
+      "testimonial1": "This is a testimonial. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse eget sodales egestas.",
+      "testimonial2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse eget sodales egestas.",
+      "image": "/images/testimonials/image1.jpg"
+    },
+    {
+      "name": "Bob Johnson",
+      "company": "Company 2 / CEO",
+      "testimonial1": "This is yet another testimonial. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse eget sodales egestas.",
+      "testimonial2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse eget sodales egestas.",
+      "image": "/images/testimonials/image2.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "company": "Company 3 / CEO",
+      "testimonial1": "This is another testimonial. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse eget sodales egestas.",
+      "testimonial2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit id fringilla turpis tempor enim. Vel tristique suspendisse eget sodales egestas.",
+      "image": "/images/testimonials/image3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "menuItems": [
+    {
+      "name": "About",
+      "path": "about"
+    },
+    {
+      "name": "Services",
+      "path": "services"
+    },
+    {
+      "name": "Portfolio",
+      "path": "portfolio"
+    },
+    {
+      "name": "Testimonials",
+      "path": "testimonials"
+    },
+    {
+      "name": "Team",
+      "path": "team"
+    },
+    {
+      "name": "News",
+      "path": "news"
+    },
+
+    {
+      "name": "Contacts",
+      "path": "contacts"
+    },
+    {
+      "name": "Elements",
+      "path": "elements"
+    }
+  ]
+}
