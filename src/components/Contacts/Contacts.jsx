@@ -62,8 +62,8 @@ const Contacts = () => {
             </button>
           </form>
           <address className="not-italic">
-            <ul className="flex flex-col gap-14">
-              <li>
+            <div className="flex flex-col md:flex-row xl:flex-col justify-between md:items-center xl:items-start gap-14">
+              <div>
                 <div className="flex gap-3 mb-7">
                   <Tel />
                   <p className="text-white text-lg font-bold">Mobile number</p>
@@ -82,26 +82,28 @@ const Contacts = () => {
                   +1 252-937-3762
                   <div className="btn w-28">Call</div>
                 </a>
-              </li>
-              <li>
-                <div className="flex gap-3 mb-7">
-                  <Email />
-                  <p className="text-white text-lg font-bold">Email</p>
+              </div>
+              <div>
+                <div>
+                  <div className="flex gap-3 mb-7">
+                    <Email />
+                    <p className="text-white text-lg font-bold">Email</p>
+                  </div>
+                  <a className="text-[#B6B6B6] text-lg font-medium flex gap-7 mb-5 items-center pl-9">
+                    sample@example.com
+                  </a>
                 </div>
-                <a className="text-[#B6B6B6] text-lg font-medium flex gap-7 mb-5 items-center pl-9">
-                  sample@example.com
-                </a>
-              </li>
-              <li>
-                <div className="flex gap-3 mb-7">
-                  <Address />
-                  <p className="text-white text-lg font-bold">Address</p>
+                <div>
+                  <div className="flex gap-3 mb-7">
+                    <Address />
+                    <p className="text-white text-lg font-bold">Address</p>
+                  </div>
+                  <a className="text-[#B6B6B6] text-lg font-medium flex gap-7 mb-5 items-center pl-9">
+                    5 Indian Spring Dr. Mundelein, IL 60060
+                  </a>
                 </div>
-                <a className="text-[#B6B6B6] text-lg font-medium flex gap-7 mb-5 items-center pl-9">
-                  5 Indian Spring Dr. Mundelein, IL 60060
-                </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </address>
         </div>
       </div>
