@@ -10,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     const matchMedia = window.matchMedia("(min-width: 1280px)");
-    console.log(matchMedia);
+
     const changeActive = () => {
       if (matchMedia.matchMedia) {
         setActive(false);
@@ -25,9 +25,9 @@ const Header = () => {
   return (
     <header
       id="home"
-      className="py-12 px-5 max-w-[1350px] fixed left-[50%] translate-x-[-50%] z-50 bg-main/70 w-full"
+      className="py-5 px-5  fixed left-[50%] translate-x-[-50%] z-50 bg-main/70 w-full"
     >
-      <div className="flex items-center justify-between gap-20">
+      <div className="flex items-center justify-between gap-20 max-w-[1350px] m-auto">
         <Link
           offset={-10000}
           smooth={true}
@@ -39,15 +39,15 @@ const Header = () => {
           <Logo />
         </Link>
         <button
-          className="xl:hidden"
+          className="xl:hidden relative z-50"
           type="button"
           onClick={() => setActive(!active)}
         >
           {!active ? <Burger className="block xl:hidden" /> : <Close />}
         </button>
         {active ? (
-          <nav className="absolute top-40 p-10  left-0 h-screen w-full bg-black z-[100] xl:hidden">
-            <ul className="flex flex-col gap-14">
+          <nav className="absolute top-0 p-10  left-0 h-screen w-full bg-black z-[20] xl:hidden flex flex-col items-center justify-center">
+            <ul className="flex flex-col items-center justify-center gap-8">
               {data.menuItems.map(({ name, path }) => (
                 <li key={name}>
                   <Link
@@ -58,7 +58,7 @@ const Header = () => {
                     smooth={true}
                     spy={true}
                     to={path}
-                    className="text-white font-medium text-5xl cursor-pointer"
+                    className="text-white font-medium text-3xl cursor-pointer"
                   >
                     {name}
                   </Link>
@@ -78,7 +78,7 @@ const Header = () => {
                     smooth={true}
                     spy={true}
                     to={path}
-                    className="text-white font-medium text-xl cursor-pointer"
+                    className="text-white font-medium text-xl cursor-pointer hover:text-red-300 transition-all duration-300"
                   >
                     {name}
                   </Link>
