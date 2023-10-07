@@ -9,6 +9,11 @@ const Header = () => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
+    if (active) {
+      document.body.classList.add("body-overflow-hidden");
+    } else {
+      document.body.classList.remove("body-overflow-hidden");
+    }
     const matchMedia = window.matchMedia("(min-width: 1280px)");
 
     const changeActive = () => {
@@ -20,7 +25,7 @@ const Header = () => {
     return () => {
       matchMedia.removeEventListener("change", changeActive);
     };
-  }, []);
+  }, [active]);
 
   return (
     <header
