@@ -6,7 +6,7 @@ import image5 from "../../assets/ourWorks/5.jpg";
 
 const OurWorks = () => {
   return (
-    <section id="portfolio" className="py-14 bg-black">
+    <section id="portfolio" className="py-14 bg-black section">
       <div className="container">
         <h2 className="title mb-20 text-left">Our works</h2>
         <div className="flex flex-wrap gap-5">

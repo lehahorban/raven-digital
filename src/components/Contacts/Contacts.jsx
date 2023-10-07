@@ -4,7 +4,7 @@ import Address from "../../assets/address.svg?react";
 
 const Contacts = () => {
   return (
-    <section id="contacts" className="py-14">
+    <section id="contacts" className="py-14 section">
       <div className="container">
         <h2 className="title mb-20">Contacts</h2>
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-60">

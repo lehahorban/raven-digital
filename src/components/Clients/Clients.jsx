@@ -5,7 +5,7 @@ import image4 from "../../assets/client/nike.png";
 
 const Clients = () => {
   return (
-    <section className="bg-black py-14">
+    <section className="bg-black py-14 section">
       <div className="container">
         <h2 className="title text-left mb-6">Clients</h2>
         <div className="flex gap-x-10 flex-wrap justify-center">

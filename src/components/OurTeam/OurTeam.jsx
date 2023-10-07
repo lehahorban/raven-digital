@@ -8,7 +8,7 @@ import Facebook from "../../assets/facebook.svg?react";
 
 const OurTeam = () => {
   return (
-    <section id="team" className="py-14">
+    <section id="team" className="py-14 section">
       <div className="container">
         <h2 className="title text-left mb-14">Our team</h2>
         <div className="flex flex-wrap xl:flex-nowrap gap-6">

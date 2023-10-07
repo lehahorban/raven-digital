@@ -7,7 +7,7 @@ import Six from "../../assets/whatWeDo/6.svg?react";
 
 const WhatWeDo = () => {
   return (
-    <section id="services" className="py-14">
+    <section id="services" className="py-14 section">
       <div className="container">
         <h2 className="title">What we do</h2>
         <ul className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-4 gap-3 py-20">

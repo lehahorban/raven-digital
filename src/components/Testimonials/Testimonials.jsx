@@ -9,7 +9,7 @@ const Testimonials = () => {
   const [activeSlide, setActiveSlide] = useState(1);
 
   return (
-    <section id="testimonials" className="py-14">
+    <section id="testimonials" className="py-14 section">
       <div className="container relative">
         <Slider
           onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex + 1)}

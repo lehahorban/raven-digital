@@ -4,7 +4,7 @@ import image3 from "../../assets/blog/3.png";
 
 const Blog = () => {
   return (
-    <section id="news" className="py-14">
+    <section id="news" className="py-14 section">
       <div className="container">
         <h2 className="title mb-14">Blog</h2>
         <div className="flex flex-wrap justify-center xl:flex-nowrap gap-7">

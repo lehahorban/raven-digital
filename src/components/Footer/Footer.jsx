@@ -5,7 +5,7 @@ import Facebook from "../../assets/facebook.svg?react";
 
 const Footer = () => {
   return (
-    <footer id="elements" className="py-16 bg-black">
+    <footer id="elements" className="py-16 bg-black section">
       <div className="container">
         <div className="flex flex-col items-center">
           <Logo className="mb-9" />

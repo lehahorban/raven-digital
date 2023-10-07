@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import Logo from "../../assets/logo.svg?react";
 import Burger from "../../assets/burger.svg?react";
 import Close from "../../assets/close.svg?react";
-import { Link } from "react-scroll";
 import data from "../../data/menu.json";
+import { useScroll } from "../../hook/useScroll";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [active, setActive] = useState(false);
+  const [scrollToSection] = useScroll(".section", "link", "active");
 
   useEffect(() => {
     if (active) {
@@ -30,19 +32,19 @@ const Header = () => {
   return (
     <header
       id="home"
-      className="py-5 px-5  fixed left-[50%] translate-x-[-50%] z-50 bg-main/70 w-full"
+      className="py-5 px-5  fixed  z-50 bg-main/70 w-full section"
     >
       <div className="flex items-center justify-between gap-20 max-w-[1350px] m-auto">
-        <Link
-          offset={-10000}
-          smooth={true}
-          duration={500}
+        <a
+          href="#home"
           className="cursor-pointer"
-          to="home"
-          spy={true}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("home");
+          }}
         >
           <Logo />
-        </Link>
+        </a>
         <button
           className="xl:hidden relative z-50"
           type="button"
@@ -57,7 +59,7 @@ const Header = () => {
                 <li key={name}>
                   <Link
                     onClick={() => setActive(false)}
-                    offset={-148}
+                    offset={-92}
                     duration={500}
                     activeClass={"active"}
                     smooth={true}
@@ -76,17 +78,16 @@ const Header = () => {
             <ul className="flex gap-14">
               {data.menuItems.map(({ name, path }) => (
                 <li key={name}>
-                  <Link
-                    offset={-148}
-                    duration={500}
-                    activeClass={"active"}
-                    smooth={true}
-                    spy={true}
-                    to={path}
-                    className="text-white font-medium text-xl cursor-pointer hover:text-red-300 transition-all duration-300"
+                  <a
+                    href={`#${path}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(path, -92);
+                    }}
+                    className="text-white font-medium text-xl cursor-pointer hover:text-red-300 transition-all duration-300 link"
                   >
                     {name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

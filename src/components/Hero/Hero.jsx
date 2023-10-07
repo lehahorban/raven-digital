@@ -2,7 +2,7 @@ import hero from "../../assets/hero/hero.jpg";
 
 const Hero = () => {
   return (
-    <section id="about" className="pt-44 pb-14 flex">
+    <section id="about" className="pt-28 pb-14 flex section">
       <div className="container">
         <div className="flex flex-col xl:flex-row gap-20">
           <div className="pt-12">
