@@ -65,7 +65,7 @@ const Header = () => {
                     smooth={true}
                     spy={true}
                     to={path}
-                    className="text-white font-medium text-3xl cursor-pointer"
+                    className="text-white font-medium text-3xl cursor-pointer hover:text-red-300 transition-all duration-300"
                   >
                     {name}
                   </Link>
