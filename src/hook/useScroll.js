@@ -36,6 +36,7 @@ export const useScroll = (sectionSelector, linkClass, activeClass) => {
   }, [activeSection, linkClass, activeClass]);
 
   const scrollToSection = (id, offset = 0) => {
+    console.log(document.getElementById(id).offsetTop + offset);
     window.scrollTo({
       top: document.getElementById(id).offsetTop + offset,
       behavior: "smooth",

@@ -9,6 +9,7 @@ import { Link } from "react-scroll";
 const Header = () => {
   const [active, setActive] = useState(false);
   const [scrollToSection] = useScroll(".section", "link", "active");
+  const [currentLink, setCurrentLink] = useState("about");
 
   useEffect(() => {
     if (active) {
@@ -58,14 +59,16 @@ const Header = () => {
               {data.menuItems.map(({ name, path }) => (
                 <li key={name}>
                   <Link
-                    onClick={() => setActive(false)}
+                    onClick={() => {
+                      setActive(false), setCurrentLink(path);
+                    }}
                     offset={-92}
                     duration={500}
-                    activeClass={"active"}
                     smooth={true}
-                    spy={true}
                     to={path}
-                    className="text-white font-medium text-3xl cursor-pointer hover:text-red-300 transition-all duration-300"
+                    className={`text-white font-medium text-3xl cursor-pointer hover:text-red-300 transition-all duration-300 ${
+                      currentLink === path ? "active" : ""
+                    }`}
                   >
                     {name}
                   </Link>
@@ -82,9 +85,7 @@ const Header = () => {
                     href={`#${path}`}
                     offset={-92}
                     duration={500}
-                    activeClass={"active"}
                     smooth={true}
-                    spy={true}
                     to={path}
                     className="text-white font-medium text-xl cursor-pointer hover:text-red-300 transition-all duration-300 link"
                   >
