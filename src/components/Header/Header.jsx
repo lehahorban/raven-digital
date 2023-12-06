@@ -20,7 +20,7 @@ const Header = () => {
     const matchMedia = window.matchMedia("(min-width: 1280px)");
 
     const changeActive = () => {
-      if (matchMedia.matchMedia) {
+      if (matchMedia.matches) {
         setActive(false);
       }
     };
