@@ -78,16 +78,18 @@ const Header = () => {
             <ul className="flex gap-14">
               {data.menuItems.map(({ name, path }) => (
                 <li key={name}>
-                  <a
+                  <Link
                     href={`#${path}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(path, -92);
-                    }}
+                    offset={-92}
+                    duration={500}
+                    activeClass={"active"}
+                    smooth={true}
+                    spy={true}
+                    to={path}
                     className="text-white font-medium text-xl cursor-pointer hover:text-red-300 transition-all duration-300 link"
                   >
                     {name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

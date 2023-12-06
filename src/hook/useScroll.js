@@ -12,7 +12,7 @@ export const useScroll = (sectionSelector, linkClass, activeClass) => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     const sections = document.querySelectorAll(sectionSelector);
@@ -26,7 +26,7 @@ export const useScroll = (sectionSelector, linkClass, activeClass) => {
   useEffect(() => {
     const links = document.querySelectorAll(`.${linkClass}`);
     links.forEach((link) => {
-      const linkHref = link.getAttribute("href").replace("#", "");
+      const linkHref = link.getAttribute("href")?.replace("#", "");
       if (activeSection === linkHref) {
         link.classList.add(activeClass);
       } else {
